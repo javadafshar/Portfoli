@@ -1,0 +1,15 @@
+.ImageCircles {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Palatino", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+#defaultCanvas1 {
+  display: none;
+}

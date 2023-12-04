@@ -1,0 +1,69 @@
+.mernlogo {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  z-index: 5;
+  animation: mern 19s ease-in-out;
+  // animation-duration: 3s;
+
+  .circle {
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    left: 23.5%;
+    top: -1%;
+    z-index: -1;
+
+    border-radius: 50%;
+    background-color: red;
+    animation: rotateCircle 6s linear infinite, changeColor 6s linear infinite;
+  }
+
+  img {
+    width: 65%;
+  }
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mern {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: rgb(255, 60, 0);
+  }
+  25% {
+    background-color: rgb(235, 2, 2);
+  }
+  50% {
+    background-color: rgb(128, 0, 0);
+  }
+  75% {
+    background-color: rgb(255, 0, 0);
+  }
+  100% {
+    background-color: rgb(255, 60, 0);
+  }
+}

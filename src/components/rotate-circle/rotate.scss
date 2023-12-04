@@ -1,0 +1,178 @@
+.rotatecontainer {
+  position: absolute;
+  top: 65%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  //margin: auto;
+  perspective: 1000px;
+  color: rgb(36, 36, 36);
+  text-align: center;
+  font-family: fantasy;
+  z-index: 5;
+  animation: motion 4s linear infinite ease-in-out;
+
+  .circleCenter {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(22, 22, 24);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+    background: url("../../Asesist/centrCircl.png");
+    background-size: cover;
+
+    .merntext {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.1rem;
+
+      :nth-child(1) {
+        color: green;
+      }
+      :nth-child(2) {
+        color: rgb(255, 255, 255);
+      }
+      :nth-child(3) {
+        color: #7bcee0;
+      }
+      :nth-child(4) {
+        color: rgb(0, 128, 75);
+      }
+      :nth-child(5) {
+        color: white;
+      }
+      :nth-child(6) {
+        color: rgb(245, 245, 245);
+        font-size: 0.8rem;
+      }
+    }
+  }
+  p {
+  }
+  .RotateCircle {
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    font-size: 0.725rem;
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+
+    /*  box-shadow: 0 15px 25px -4px rgb(0 0 0 / 24%),
+      inset 0 -3px 4px -1px rgb(0 0 0 / 27%),
+      0 -10px 15px -1px rgb(255 255 255 / 80%),
+      0 3px 4px -1px rgba(255, 255, 255, 0.2),
+      0 0 5px 1px rgb(255 255 255 / 73%),
+      0px -3px 0px 0 rgba(255, 255, 255, 0.2); */
+    stroke: 1px solid black;
+    opacity: 0;
+    animation: rotate 4s linear infinite, fade 4s;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .Mongodb,
+  .middle {
+    margin: auto;
+    padding: 0;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  .RotateCircle1 {
+    animation-delay: 1s;
+    p {
+      color: rgb(255, 30, 0);
+      margin-top: -1px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .RotateCircle2 {
+    animation-delay: 2s;
+    transform: rotate(90deg);
+    p {
+      margin-top: -1px;
+      font-size: 0.65rem;
+    }
+  }
+  .RotateCircle3 {
+    animation-delay: 3s;
+    transform: rotate(180deg);
+    p {
+      color: rgb(0, 158, 150);
+      margin-top: -1px;
+      font-size: 0.65rem;
+    }
+  }
+  .RotateCircle4 {
+    animation-delay: 4s;
+    transform: rotate(270deg);
+    p {
+      color: rgb(10, 119, 0);
+      margin-top: -1px;
+      font-size: 0.65rem;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translate(100px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translate(100px)
+      rotate(-360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes motion {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+.RotateCircle:hover {
+  width: 70px;
+  height: 70px;
+}
+.rotatecontainer {
+  animation: motion 4s linear infinite;
+}

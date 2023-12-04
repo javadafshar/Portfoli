@@ -1,0 +1,121 @@
+.contactuscontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  color: #fff;
+}
+.contactuscontainer .contactform {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contactuscontainer .contactform label {
+  margin-bottom: 5px;
+}
+.contactuscontainer .contactform input {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #303030;
+}
+.contactuscontainer .contactform textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  color: #303030;
+}
+.contactuscontainer .contactform button {
+  padding: 10px 20px;
+  background-color: #fd4556;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.contactuscontainer .contactform button:hover {
+  background-color: #4ce0c9;
+}
+
+/* .success-popup {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #969b9a;
+  animation: animate 2s ease-in-out;
+} */
+@keyframes animate {
+  0% {
+    top: 0rem;
+  }
+  100% {
+    top: 3rem;
+  }
+}
+.success-popup {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.success-popup:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.success-popup:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 320px) {
+  .contactform {
+    width: 290px !important;
+  }
+}

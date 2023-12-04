@@ -1,0 +1,7 @@
+@media screen and (max-width: 419px) and (min-width: 320px) {
+  #tsparticles {
+    top: 0;
+    right: auto;
+    left: 0;
+  }
+}

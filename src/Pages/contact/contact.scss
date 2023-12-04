@@ -1,0 +1,16 @@
+.contactContainer {
+  position: relative;
+
+  height: 100dvh;
+
+  background: linear-gradient(135deg, black, #220033);
+
+  overflow: hidden;
+  font-family: "Roboto", serif;
+}
+
+@media (max-width: 768) {
+  .contactContainer {
+    height: 100dvb;
+  }
+}

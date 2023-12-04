@@ -1,0 +1,224 @@
+.Typed2Container {
+  z-index: 5;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 20rem;
+
+  .sec1 {
+    flex: 1;
+    .type {
+      color: rgb(255, 255, 255) !important;
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .worked {
+      max-width: 28rem;
+      justify-self: auto;
+      font-family: sans-serif;
+      font-style: bold;
+    }
+    .workCounter {
+      display: flex;
+      justify-content: space-between;
+      max-width: 26rem;
+      margin-left: 0;
+      .sec {
+        border-right: 1px solid red;
+        padding: 0 10px;
+        width: 8rem;
+        font-style: bold;
+        :nth-child(1) {
+          color: #ff0037;
+          font-size: 1rem;
+          font-weight: bold;
+          font-family: fantasy;
+        }
+        span {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .sec2 {
+    margin-left: 1.5rem;
+
+    color: white;
+    border-left: 1px solid rgba(128, 128, 128, 0.137);
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .Header {
+      gap: 1rem;
+      //color: #ff0037;
+      font-family: sans-serif;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      .title {
+        cursor: pointer !important;
+        border-radius: 5px;
+        border: 1px solid rgb(86 17 129);
+        padding: 3px;
+      }
+    }
+  }
+}
+.activet {
+  color: #ff0037;
+  cursor: pointer;
+  color: #ff0037;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  padding: 3px;
+  //text-shadow: 0 0 10px #ff0037, 0 0 20px #ff0037, 0 0 30px #ff0037;
+  animation: neon 1s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+.activet::after {
+  animation: slide 3s ease-in-out infinite;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.data {
+  .icon {
+    display: flex;
+    font-size: 1.2rem;
+    margin: 0.3rem 0 1rem -0.5rem;
+    // justify-content: end;
+  }
+
+  .zer {
+    word-wrap: break-word;
+    .info {
+      display: flex;
+      .titleC {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        font-size: 1rem;
+        word-wrap: break-word;
+      }
+      .title {
+        max-width: 20rem;
+        overflow-wrap: break-word;
+        font-size: 14px;
+      }
+    }
+    .icon > * {
+      margin: 3px;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 10px #ff0037, 0 0 20px #ff0037, 0 0 30px #ff0037;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff0037, 0 0 30px #ff0037, 0 0 40px #ff0037;
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+///  make responsive
+///
+@media (max-width: 768px) {
+  .Typed2Container {
+    flex-direction: column;
+    margin-top: -5rem;
+  }
+  .data {
+    margin-top: -15px;
+  }
+  .type {
+    font-size: 1.2rem !important;
+    padding: 0;
+  }
+  .worked {
+    font-size: 0.75rem !important;
+  }
+  .workCounter {
+    margin-top: -4rem;
+  }
+  .sec2 {
+    margin-top: 1rem;
+    border-top: 1px solid #303030;
+    border-left: 0px !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+    .icon {
+      margin: 0;
+    }
+  }
+  .sec2 .Header {
+    gap: 0.5rem;
+  }
+  .sec {
+    line-height: 1;
+  }
+  /* Adjust other styles as needed for smaller screens */
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .Typed2Container {
+    margin-left: auto !important;
+  }
+  .worked {
+    max-width: 19rem !important;
+  }
+  .sec {
+    width: auto !important;
+    padding: 0px !important;
+    border-right: none !important;
+  }
+  .Header {
+    gap: 0.2rem !important;
+  }
+  .title {
+    //  padding: 0px !important;
+    font-size: 0.8rem !important;
+  }
+  .workCounter {
+    max-width: 18rem !important;
+  }
+  .icon {
+    font-size: 1rem !important;
+  }
+}

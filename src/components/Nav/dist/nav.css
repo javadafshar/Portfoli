@@ -1,0 +1,60 @@
+.navContainer {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 55px;
+  width: 30px;
+  height: 200px;
+  align-self: center;
+  border: 1px solid #c0c0c021;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 9px 5px;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 21;
+}
+.navContainer .navLink {
+  text-decoration: none;
+  color: white;
+}
+.navContainer .navLink:activelink {
+  color: #ff0037;
+  /* Change the color when the link is active */
+}
+.navContainer .activeLink {
+  color: #ff0037;
+}
+.navContainer .activeLink svg {
+  color: #ff0037;
+}
+.navContainer .muiIcon {
+  justify-content: space-around;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
+
+.active > .muiIcon {
+  color: red;
+  font-weight: bolder;
+  animation-duration: 4s;
+}
+
+.muiIcon:hover {
+  color: red;
+  font-weight: bolder;
+  animation-duration: 4s;
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    position: absolute;
+    top: 86vh;
+    left: 20%;
+    flex-direction: row;
+    width: 60%;
+    height: 30px;
+  }
+}

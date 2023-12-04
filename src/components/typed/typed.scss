@@ -1,0 +1,63 @@
+/* Define the custom font */
+@font-face {
+  font-family: "CustomFont";
+  src: url("../../myFont/Autography-DOLnW.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply styles to the elements */
+.typedContainers {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  text-align: center;
+  min-width: 20rem;
+  .intro {
+    font-family: "  sans-serif "; // Correctly reference font family
+    font-size: 2rem;
+    // animation: flux 6s ease infinite;
+    // -moz-animation: flux 6s ease infinite;
+    //  -webkit-animation: flux 6s ease infinite;
+    mix-blend-mode: lighten;
+  }
+  .type {
+    color: rgb(255, 255, 255) !important;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: auto;
+  }
+  .slider {
+    color: #ff0037;
+    font-size: 1.5rem;
+    font-family: auto;
+  }
+}
+
+/* Flickering animation */
+@keyframes neon {
+  /* ... your neon animation keyframes ... */
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 3vw #10ff58, 0 0 1.5vw #1041ff, 0 0 0vw #10ff30,
+      0 0 1vw #1041ff, 0 0 0.2vw #8bfdfe, 0.2vw 0.2vw 0.1vw #147280;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 0vw #082180,
+      0 0 1vw #082180, 0 0 0.2vw #082180, 0.2vw 0.3vw 0.1vw #0a3940;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .typedContainers {
+    left: 7%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .typedContainers {
+    left: 0%;
+  }
+}

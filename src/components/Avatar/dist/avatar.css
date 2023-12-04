@@ -1,0 +1,26 @@
+/* avatar.scss */
+.avatarContainer {
+  overflow: hidden;
+}
+.avatarContainer .avatar {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 400px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .avatarContainer .avatar {
+    margin: auto;
+    width: 350px;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .aboutMeContainer .avatarContainer .avatar {
+    display: none !important;
+  }
+}
