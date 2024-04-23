@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.scss";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { Instagram, LinkedIn, YouTube } from "@material-ui/icons";
+import { Instagram, LinkedIn, YouTube, WhatsApp } from "@material-ui/icons";
 
 const Header = () => {
   return (
@@ -31,16 +31,16 @@ const Header = () => {
 
         <a
           className="Youtube"
-          href="https://www.facebook.com/javad.afshar.7"
+          href="http://wa.me/033751272799"
           target="_blank"
           rel="noreferrer"
         >
-          <YouTube />
+          <WhatsApp />
         </a>
 
         <a
           className="Linkdin"
-          href="https://www.facebook.com/javad.afshar.7"
+          href="https://www.linkedin.com/in/javad-afshar-0a3692a1"
           target="_blank"
           rel="noreferrer"
         >
